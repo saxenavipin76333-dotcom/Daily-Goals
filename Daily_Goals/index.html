@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily|Goals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="page-header">
+            <p class="eyebrow">A LITTLE PROGRESS, EVERY DAY</p>
+            <h1>Daily Goals</h1>
+            <p class="today-date" id="today-date"></p>
+        </header>
+
+        <section class="goal-card" aria-label="Daily goals">
+            <form class="goal-form" id="goal-form">
+                <label class="sr-only" for="goal-input">
+                    What would you like to accomplish?
+                </label>
+                
+                <input id="goal-input" name="goal" type="text" placeholder="What would you like to accomplish?" maxlength="120" autocomplete="off" required>
+                <button class="add-button" type="submit">Add Goal</button>
+            </form>
+
+            <div class="progrss-summary" aria-label="Daily-goals">
+                <div class="progress-heading">
+                    <h2>Today's Progress</h2>
+                    <span id="progress-label">0 of 0 complete</span>
+                </div>
+
+                <div class="progress-track" id="progress-track" role="progressbar" aria-label="Goals completed" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0">
+                   <div class="progress-fill" id="progress-fill"></div>
+                </div>
+
+                <div class="goal-counts">
+                    <p><strong id="total-count">0</strong><span>Toatal Goals</span></p>
+                    <p><strong id="completed-count">0</strong><span>Completed</span></p>
+                    <p><strong id="remaining-count">0</strong><span>Remainning</span></p>
+                </div>
+            </div>
+
+            <div class="list-heading">
+                <h2>Your Goals</h2>
+                <span class="list-note">One step at a time</span>
+            </div>
+
+            <ul class="goal-list" id="goal-list"></ul>
+            <p class="empty-message" id="empty-message">
+                Your list is clear. Add a goal to get started.
+            </p>
+        </section>
+
+        <footer class="page-footer">Make today count, at your your own pace</footer>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
